@@ -1,0 +1,35 @@
+#include <iostream>
+#include <vector>
+
+template <typename datatype>
+void print_array(datatype &v )
+{
+    for (auto &i : v)
+    {
+        std::cout << i << std::endl;
+    }
+}
+
+template <typename datatype>
+void print(datatype &v)
+{
+    std::cout << v << std::endl;
+}
+
+int main (){
+    std::vector <int> v {1,2,3,4,5};
+    std::string a = "fahrul";
+    std::vector <std::string> data {{"fahrul"}, {"firmansyah"}};
+    int c = 5;
+    
+    print_array(v);
+    std::cout << std::endl;
+    print_array(a);
+    std::cout << std::endl;
+    print_array(data);
+    std::cout << std::endl;
+    print(c);
+
+
+    return 0;
+}
