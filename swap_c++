@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+template <typename T>
+void swap_variable(T &a, T &b)
+{
+    a = b - a + (b = a);
+    return;
+}
+
+void swap_variable(string a, string b)
+{
+    string c = a;
+    a = b;
+    b = c;
+    return;
+}
+
+int main ()
+{
+    auto a = 0;
+    auto b = 1;
+
+    swap_variable(a,b);
+
+    cout <<  a << endl;
+    cout <<  b << endl;
+
+    return 0;
+}
